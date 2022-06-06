@@ -1,1 +1,1 @@
-{"mappings":"","sources":["styles/style.css"],"sourcesContent":[null],"names":[],"version":3,"file":"index.2687eea0.css.map","sourceRoot":"/__parcel_source_root/"}
+{"mappings":"AAAA","sources":["styles/style.css"],"sourcesContent":["*,\n*::before,\n*::after {\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n}\n"],"names":[],"version":3,"file":"index.2687eea0.css.map","sourceRoot":"/__parcel_source_root/"}
