@@ -5,11 +5,83 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>To-Do App</title>
-		<link rel="stylesheet" href="../styles/normalize.css" />
-		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../src/styles/normalize.css" />
+		<link rel="stylesheet" href="../src/styles/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<script src="app.js" type="module"></script>
 	</head>
 	<body>
-		<h1>test</h1>
+		<header class="left-section">
+			<nav class="nav">
+				<h1 id="logo"></h1>
+				<ul class="main-pages">
+					<li class="page">
+						<object data="./icons/house-solid.svg" class="home-icon"></object>
+						HOME
+					</li>
+					<li class="page">
+						<object
+							data="./icons/calendar-day-solid.svg"
+							class="today-icon"
+						></object>
+						TODAY
+					</li>
+					<li class="page">
+						<object
+							data="./icons/calendar-week-solid.svg"
+							class="this-week-icon"
+						></object>
+						THIS WEEK
+					</li>
+				</ul>
+				<div class="projects-btn-container">
+					<button class="projects-btn">
+						Projects
+						<object
+							data="./icons/angle-down-solid.svg"
+							class="arrow-down-icon"
+						></object>
+					</button>
+				</div>
+				<div class="projects-container">
+					<ul class="projects-container">
+						<li class="project">Study</li>
+					</ul>
+					<button class="new-project">
+						<object data="./icons/plus-solid.svg" class="plus-icon"></object>
+						Create a new project
+					</button>
+				</div>
+
+				<button class="new-task-btn">
+					<object data="./icons/plus-solid.svg" class="plus-icon-big"></object>
+				</button>
+			</nav>
+		</header>
+		<main class="right-section">
+			<header>
+				<h2 class="project-name-header">
+					<object data="./icons/house-solid.svg" class="home-icon-big"></object>
+					Home
+				</h2>
+			</header>
+			<section class="tasks">
+				<h3 class="my-tasks">
+					<object data="./icons/list-ul-solid.svg" class="tasks-icon"></object>
+					My Tasks
+				</h3>
+				<div class="tasks-container">
+					<ul class="task-list">
+						<li class="task-item"></li>
+					</ul>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>
