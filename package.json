@@ -1,0 +1,25 @@
+{
+	"name": "to-do-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "parcel",
+		"build": "parcel build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/amilkez/to-do-app.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/amilkez/to-do-app/issues"
+	},
+	"homepage": "https://github.com/amilkez/to-do-app#readme",
+	"devDependencies": {
+		"parcel": "^2.6.0"
+	}
+}
