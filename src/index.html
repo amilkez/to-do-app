@@ -5,8 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>To-Do App</title>
-		<link rel="stylesheet" href="../src/styles/normalize.css" />
-		<link rel="stylesheet" href="../src/styles/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -14,7 +12,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<script src="app.js" type="module"></script>
+		<script src="app.js" type="module" defer></script>
 	</head>
 	<body>
 		<header class="left-section">
@@ -65,11 +63,9 @@
 			</nav>
 		</header>
 		<main class="right-section">
-			<header>
-				<h2 class="project-name-header">
-					<object data="./icons/house-solid.svg" class="home-icon-big"></object>
-					Home
-				</h2>
+			<header class="project-name-header">
+				<object data="./icons/house-solid.svg" class="home-icon-big"></object>
+				<h2 class="project-name">Home</h2>
 			</header>
 			<section class="tasks">
 				<h3 class="my-tasks">
@@ -78,8 +74,36 @@
 				</h3>
 				<div class="tasks-container">
 					<ul class="task-list">
-						<li class="task-item"></li>
+						<li class="task-item prio-high">
+							<input type="checkbox" name="checkbox" id="checkbox-1" />
+							<span class="todo-title">This is a title</span>
+							<span class="todo-description"
+								>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Excepturi, odio...</span
+							>
+							<span class="todo-due-date">
+								<object
+									data="./icons/calendar-xmark-solid.svg"
+									class="due-date-icon"
+								></object>
+								<span class="due-date">06/25/2022</span>
+							</span>
+							<object
+								data="./icons/angle-down-solid.svg"
+								class="arrow-down-icon"
+							></object>
+						</li>
 					</ul>
+				</div>
+				<div class="buttons-container">
+					<button class="clear-tasks-btn">
+						<object data="./icons/eraser-solid.svg" class="clear-icon"></object>
+						Clear Finished Tasks
+					</button>
+					<button class="add-note-btn">
+						<object data="./icons/plus-solid.svg" class="plus-icon"></object>Add
+						a note
+					</button>
 				</div>
 			</section>
 		</main>

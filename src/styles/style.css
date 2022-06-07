@@ -21,10 +21,11 @@
 }
 
 .arrow-down-icon,
+.due-date-icon,
 .plus-icon,
 .clear-icon {
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 1.2rem;
+	height: 1.2rem;
 	vertical-align: -0.125em;
 }
 
@@ -64,4 +65,71 @@ body {
 
 .right-section {
 	height: 100vh;
+	background-color: hsl(0, 0%, 90%);
+}
+
+.project-name-header {
+	display: flex;
+	align-items: center;
+	margin: 2.5rem;
+	padding: 1.5rem;
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 7px 5px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.tasks {
+	margin: 2.5rem;
+	padding: 1.5rem;
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 7px 5px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.my-tasks {
+	display: flex;
+	align-items: center;
+}
+
+.task-list {
+	display: flex;
+	cursor: pointer;
+	padding: 2rem;
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 7px 5px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	position: relative;
+	width: 1em;
+	height: 1em;
+	border: 1px solid gray;
+	/* Adjusts the position of the checkboxes on the text baseline */
+	vertical-align: -2px;
+	/* Set here so that Windows' High-Contrast Mode can override */
+	color: black;
+}
+
+input[type="checkbox"]::before {
+	content: "✔";
+	position: absolute;
+	font-size: 1.2em;
+	right: -2px;
+	top: -2px;
+	visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+	/* Use `visibility` instead of `display` to avoid recalculating layout */
+	visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+	border-color: black;
+	background: #ddd;
+	color: gray;
 }
