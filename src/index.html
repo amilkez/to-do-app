@@ -17,7 +17,7 @@
 	<body>
 		<header class="left-section">
 			<nav class="nav">
-				<h1 id="logo"></h1>
+				<h1 id="logo">Logo</h1>
 				<ul class="main-pages">
 					<li class="page">
 						<object data="./icons/house-solid.svg" class="home-icon"></object>
@@ -57,7 +57,7 @@
 					</button>
 				</div>
 
-				<button class="new-task-btn">
+				<button class="add-task">
 					<object data="./icons/plus-solid.svg" class="plus-icon-big"></object>
 				</button>
 			</nav>
@@ -100,12 +100,35 @@
 						<object data="./icons/eraser-solid.svg" class="clear-icon"></object>
 						Clear Finished Tasks
 					</button>
-					<button class="add-note-btn">
+					<button class="add-task">
 						<object data="./icons/plus-solid.svg" class="plus-icon"></object>Add
-						a note
+						a task
 					</button>
 				</div>
 			</section>
 		</main>
+		<div class="task-modal">
+			<h3>Create a New Task</h3>
+			<form class="task-form">
+				<label class="label label-title">Title:</label
+				><input class="input-title input" type="text" /><label
+					class="label label-description"
+					>Description:</label
+				><input class="input input-description" type="text" /><label
+					class="label label-priority"
+					for="priority"
+					>Select the priority Level: </label
+				><select class="select-priority" name="priority" id="priority">
+					<option value="High">High</option>
+					<option value="Medium">Medium</option>
+					<option value="Low">Low</option></select
+				><label class="label label-due-date">Select a due date:</label
+				><input class="input input-due-date" type="date" /><button
+					class="btn create-task-btn"
+				>
+					Create Task
+				</button>
+			</form>
+		</div>
 	</body>
 </html>
