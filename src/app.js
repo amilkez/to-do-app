@@ -2,7 +2,11 @@ import "./styles/normalize.css";
 import "./styles/style.css";
 
 import { RenderElements } from "./renderElements";
-import { createTaskModal } from "./createTaskModal";
+import { createTodo } from "./create-todo";
+
+// Tasks
+
+const tasks = [];
 
 // console.log(newTodo);
 const addTaskBtns = document.querySelectorAll(".add-task");
@@ -15,11 +19,18 @@ createTaskBtn.addEventListener("click", addTaskToProject);
 
 function addTaskToProject(e) {
 	e.preventDefault();
-	const title = document.querySelector(".input-title").value;
-	const description = document.querySelector(".input-description").value;
-	const priority = document.querySelector(".select-priority").value;
-	const dueDate = document.querySelector(".input-due-date").value;
-
+	const title = document.querySelector(".input-title");
+	const description = document.querySelector(".input-description");
+	const priority = document.querySelector(".select-priority");
+	const dueDate = document.querySelector(".input-due-date");
+	tasks.push(
+		createTodo(title.value, description.value, priority.value, dueDate.value)
+	);
+	tasks.forEach((task) => {
+		RenderElements.createTask(task);
+	});
+	RenderElements.clearNewTasksInputs(title, description, priority, dueDate);
 	RenderElements.hideAddTaskModal();
-	console.log({ title, description, priority, dueDate });
 }
+
+// const newTodo = createTodo("title", "lorem ipsum", "high", "22", true);

@@ -73,27 +73,7 @@
 					My Tasks
 				</h3>
 				<div class="tasks-container">
-					<ul class="task-list">
-						<li class="task-item prio-high">
-							<input type="checkbox" name="checkbox" id="checkbox-1" />
-							<span class="todo-title">This is a title</span>
-							<span class="todo-description"
-								>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Excepturi, odio...</span
-							>
-							<span class="todo-due-date">
-								<object
-									data="./icons/calendar-xmark-solid.svg"
-									class="due-date-icon"
-								></object>
-								<span class="due-date">06/25/2022</span>
-							</span>
-							<object
-								data="./icons/angle-down-solid.svg"
-								class="arrow-down-icon"
-							></object>
-						</li>
-					</ul>
+					<ul class="task-list"></ul>
 				</div>
 				<div class="buttons-container">
 					<button class="clear-tasks-btn">
@@ -130,5 +110,23 @@
 				</button>
 			</form>
 		</div>
+		<template id="template-li">
+			<li class="task-item">
+				<input type="checkbox" name="checkbox" id="checkbox-1" />
+				<span class="todo-title"></span>
+				<span class="todo-description"></span>
+				<span class="todo-due-date">
+					<object
+						data="./icons/calendar-xmark-solid.svg"
+						class="due-date-icon"
+					></object>
+					<span class="due-date"></span>
+				</span>
+				<object
+					data="./icons/angle-down-solid.svg"
+					class="arrow-down-icon"
+				></object>
+			</li>
+		</template>
 	</body>
 </html>

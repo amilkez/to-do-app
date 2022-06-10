@@ -4,12 +4,10 @@ const createTodo = (
 	title,
 	description,
 	dueDate,
-	priority,
+	priority = "high",
 	isCompleted = false
 ) => {
 	return { title, description, dueDate, priority, isCompleted };
 };
-
-const newTodo = createTodo("title", "lorem ipsum", "high", "22", true);
 
 export { createTodo };
