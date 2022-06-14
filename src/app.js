@@ -44,7 +44,7 @@ createTaskBtn.addEventListener('click', addTaskToProject);
 
 // dropdown maenu
 
-const projectButton = document.querySelector('.projects-btn');
+const projectButton = document.querySelector('.projects-btn-container');
 const showProjectsList = () => {
   const projectsContainer = document.querySelector('.projects-container');
   projectsContainer.classList.toggle('show-projects-list');

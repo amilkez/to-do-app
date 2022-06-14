@@ -17,7 +17,21 @@
   <body>
     <header class="left-section">
       <nav class="nav">
-        <h1 id="logo">Logo</h1>
+        <h1 id="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path
+              d="M17.55 42Q12.75 42 9.375 38.625Q6 35.25 6 30.45V17.55Q6
+            12.75 9.375 9.375Q12.75 6 17.55 6H30.45Q35.25 6 38.625 9.375Q42
+            12.75 42 17.55V30.45Q42 35.25 38.625 38.625Q35.25 42 30.45 42ZM21.95
+            31.75 33.95 19.75 31.8 17.6 21.95 27.45 17.1 22.6 14.95 24.75ZM17.55
+            39H30.45Q34 39 36.5 36.5Q39 34 39 30.45V17.55Q39 14 36.5 11.5Q34 9
+            30.45 9H17.55Q14 9 11.5 11.5Q9 14 9 17.55V30.45Q9 34 11.5 36.5Q14 39
+            17.55 39ZM24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Q24
+            24 24 24Q24 24 24 24Q24 24 24 24Q24 24 24 24Z"
+            />
+          </svg>
+          Utask
+        </h1>
         <ul class="main-pages">
           <li class="page">
             <object data="./icons/house-solid.svg" class="home-icon"></object>
@@ -39,13 +53,12 @@
           </li>
         </ul>
         <div class="projects-btn-container">
-          <h3 class="projects-btn">
-            Projects
-            <object
-              data="./icons/angle-down-solid.svg"
-              class="arrow-down-icon"
-            ></object>
-          </h3>
+          <h3 class="projects-btn">Projects</h3>
+          <img
+            src="./icons/angle-down-solid.svg"
+            alt=""
+            class="arrow-down-icon"
+          />
         </div>
         <div class="bottom">
           <ul class="projects-container">
@@ -54,7 +67,16 @@
             <li class="project">Study</li>
             <li class="project">Study</li>
             <button class="new-project">
-              <object data="./icons/plus-solid.svg" class="plus-icon"></object>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="plus-icon"
+              >
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"
+                />
+              </svg>
               Create a new project
             </button>
           </ul>
@@ -101,7 +123,7 @@
             </svg>
             Clear Finished Tasks
           </button>
-          <button class="add-task-btn">
+          <button class="add-task-btn add-task">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -121,8 +143,7 @@
       <form class="task-form">
         <label class="label label-title">Title:</label>
         <input class="input-title input" type="text" required />
-        <label class="label label-description">Description:</label>
-        <input class="input input-description" type="text" />
+
         <label class="label label-priority" for="priority">
           Select the priority Level:
         </label>
@@ -133,6 +154,14 @@
         </select>
         <label class="label label-due-date">Select a due date:</label>
         <input class="input input-due-date" type="date" />
+        <label class="label label-description">Description:</label>
+        <textarea
+          class="input-description"
+          id=""
+          maxlength="50"
+          cols="30"
+          rows="10"
+        ></textarea>
         <button class="btn create-task-btn">Create Task</button>
       </form>
     </div>
@@ -148,10 +177,12 @@
           ></object>
           <div class="due-date"></div>
         </div>
-        <object
-          data="./icons/angle-down-solid.svg"
-          class="arrow-down-icon"
-        ></object>
+        <img src="./icons/pen-to-square-solid.svg" alt="" class="edit-btn" />
+        <img
+          src="./icons/delete_FILL0_wght400_GRAD0_opsz48.svg"
+          alt=""
+          class="remove-btn"
+        />
       </li>
     </template>
   </body>

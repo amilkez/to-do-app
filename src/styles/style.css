@@ -68,20 +68,26 @@ h4 {
 .nav {
   height: 100%;
   display: grid;
-  grid-template-rows: 100px 1fr 50px 1fr 1fr;
+  grid-template-rows: 100px 1fr 50px 2fr 1fr;
   align-items: center;
   margin-left: 1rem;
 }
 
-.logo {
-  margin: 1rem;
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-pages {
+  align-self: baseline;
 }
 
 .page {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .nav > .add-task {
@@ -102,6 +108,14 @@ h4 {
   align-self: stretch;
 }
 
+.projects-btn-container {
+  justify-self: stretch;
+
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
 .projects-container {
   display: none;
   align-self: stretch;
@@ -111,6 +125,19 @@ h4 {
   display: block;
   animation: growDown 150ms ease-in-out;
   transform-origin: top;
+}
+
+.project {
+  margin: 1rem 0;
+}
+
+.new-project {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  font-size: 0.8rem;
 }
 
 @keyframes growDown {
@@ -169,12 +196,15 @@ h3.my-tasks {
   border-top: 1px solid black;
 }
 
+.todo-description {
+  color: hsl(0, 0%, 20%);
+}
+
 .task-list {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  cursor: pointer;
   padding: 2rem 0;
   border-radius: 10px;
   background-color: #fff;
@@ -189,6 +219,16 @@ h3.my-tasks {
   margin: 1rem 0;
 }
 
+.edit-btn {
+  width: 1.2rem;
+  height: auto;
+}
+
+.remove-btn {
+  width: 1.5rem;
+  height: auto;
+}
+
 .todo-due-date {
   display: flex;
   align-items: center;
@@ -196,6 +236,7 @@ h3.my-tasks {
 
 .due-date {
   margin-bottom: -4px;
+  margin-left: 1rem;
 }
 
 .buttons-container {
@@ -273,6 +314,7 @@ input[type='checkbox']:disabled {
   padding: 2rem;
   background-color: #fff;
   place-self: center;
+  box-shadow: 0px 5px 10px hsla(0, 0%, 0%, 0.1);
 }
 
 .task-form {
@@ -283,6 +325,15 @@ input[type='checkbox']:disabled {
   grid-gap: 0.7rem;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr, 2fr) 1fr;
+}
+
+.task-form .create-task-btn {
+  background-color: #f05454;
+  color: #fff;
+  border-radius: 2px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
 }
 
 .label {
